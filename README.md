@@ -17,7 +17,7 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/Parambrata-Das/Calculator-app-repo.git
    ```
 2. Navigate into the project folder.
 3. Double-click the `index.html` file to open it instantly in any web browser.
