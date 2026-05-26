@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Style Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>C-Style Calculator</h2>
+        
+        <!-- Input Fields for Numbers -->
+        <div class="input-group">
+            <label for="num1">First Number (a):</label>
+            <input type="number" id="num1" placeholder="Enter first number">
+        </div>
+        
+        <div class="input-group">
+            <label for="num2">Second Number (b):</label>
+            <input type="number" id="num2" placeholder="Enter second number">
+        </div>
+
+        <!-- Operator Buttons mimicking your switch case -->
+        <div class="operator-menu">
+            <p>Select the operation:</p>
+            <div class="button-grid">
+                <button onclick="calculate('+')">+</button>
+                <button onclick="calculate('-')">-</button>
+                <button onclick="calculate('*')">*</button>
+                <button onclick="calculate('/')">/</button>
+            </div>
+            <button class="exit-btn" onclick="exitCalc()">! (Exit)</button>
+        </div>
+
+        <!-- Display Output Box -->
+        <div class="output-box">
+            <h3>Result:</h3>
+            <div id="resultDisplay">Enter numbers and select an operation</div>
+        </div>
+    </div>
+
+    <!-- JavaScript logic to mimic your C program behavior -->
+    <script>
+        function calculate(operator) {
+            const a = parseFloat(document.getElementById('num1').value);
+            const b = parseFloat(document.getElementById('num2').value);
+            const display = document.getElementById('resultDisplay');
+
+            if (isNaN(a) || isNaN(b)) {
+                display.innerText = "Error: Please enter both numbers first.";
+                display.style.color = "#ff4d4d";
+                return;
+            }
+
+            let result;
+            display.style.color = "#fff";
+
+            switch(operator) {
+                case '+':
+                    result = a + b;
+                    break;
+                case '-':
+                    result = a - b;
+                    break;
+                case '*':
+                    result = a * b;
+                    break;
+                case '/':
+                    if (b === 0) {
+                        result = "Error: Division by zero!";
+                        display.style.color = "#ff4d4d";
+                    } else {
+                        result = a / b;
+                    }
+                    break;
+                default:
+                    result = "Enter the correct option";
+            }
+
+            display.innerText = result;
+        }
+
+        function exitCalc() {
+            const display = document.getElementById('resultDisplay');
+            display.innerText = "Program exited. Refresh to restart.";
+            display.style.color = "#aaa";
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+        }
+    </script>
+</body>
+</html>
