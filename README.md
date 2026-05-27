@@ -3,7 +3,8 @@
 A simple, lightweight web calculator that brings the logic of a classic C program terminal calculator into a clean, modern web interface. 
 
 ## 🚀 Features
-* **Two-Number Inputs:** Enter your integers (`a` and `b`) just like the original `scanf` prompts.
+* **Size Input:** Enter the number of elements(`n`) you want to count.
+* **Number Inputs:** Enter your integers just like the original `scanf` prompts.
 * **Terminal Operations:** Choose from Addition (`+`), Subtraction (`-`), Multiplication (`*`), and Division (`/`).
 * **Exit Simulation:** Includes an `!` button to simulate program exits.
 * **Error Prevention:** Built-in safeguards against division-by-zero errors.
