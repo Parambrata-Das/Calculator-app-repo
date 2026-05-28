@@ -4,17 +4,18 @@ int main ()
 {
  int i,n;
  char ch,junk;
- int total;
- '(char +,-,*,/,!,@)';
- printf("NOTE 1: Enter the number one by one don't overpress!!!\n");
- printf("NOTE 2: You can only calculate upto 100 numbers.\n");
- printf("NOTE 3: Enter '@' when you finished typing all the numbers.\n");
- int num[100];
+ float total;
+ '(char +,-,*,/,!,@,.)';
+ //("[NOTE 1: Enter the number one by one don't overpress!!!]\n")
+ //("[NOTE 2: You can only calculate upto 100 numbers.]\n")
+ //("[NOTE 3: Enter '@' when you finished typing all the numbers.]\n")
+ //("[NOTE 4: Output only comes as rount-off (eg. X.XX)]")
+ float num[100];
  
  for(n=0;n<100;n++)
    {
-       printf("\nEnter the numbers: "); 
-       if( scanf("%d",&num[n])!=1)
+       printf("Enter the numbers: "); 
+       if( scanf("%f",&num[n])!=1.00)
        {
        	    break;
 	   }
@@ -25,7 +26,7 @@ int main ()
 	   	    return 1;
 	   }
        scanf(" %c",&junk);
-       printf("\nNOTE: YOU CAN PERFORM ONE OPERATION AT A TIME; UPDATE COMING SOON !!!");
+       //("\n[NOTE: YOU CAN PERFORM ONE OPERATION AT A TIME; UPDATE COMING SOON !!!]")
        printf("\nEnter + for addition\nEnter - for subtraction\nEnter * for multiplication\nEnter / for Division\nEnter ! for exit\n");
  do{       
        printf("\nEnter the operation: ");
@@ -49,21 +50,21 @@ int main ()
 		{
            total+=num[i];
 		}
-        printf("\n%d\n",total);
+        printf("\n%.2f\n",total);
         break;
         case '-':
         for(i=1;i<n;i++)
 		{
            total-=num[i];
 		}
-        printf("\n%d\n",total);
+        printf("\n%.2f\n",total);
         break;
         case '*':
         for(i=0;i<n;i++)
 		{
            total*=num[i];
 		}
-        printf("\n%d\n",total);
+        printf("\n%.2f\n",total);
         break;
         case '/':
         for(i=1;i<n;i++)
@@ -73,10 +74,14 @@ int main ()
 				printf("!!INVALID DIVISION!!");
 				break;
 			}
+			else if(num[i-1]==0)
+			{
+			    printf("!!INVALID DIVISION!!");
+				break;	
+			}
             total/=num[i];
 		}
-        printf("\n%d\n",total);
-        printf("NOTICE: THE OUTPUT ONLY COMES IN INTEGERS; UPDATE COMING SOON\n");
+        printf("\n%.2f\n",total);
         break;
         case '!':
         exit (0);
