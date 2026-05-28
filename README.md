@@ -3,7 +3,6 @@
 A simple, lightweight web calculator that brings the logic of a classic C program terminal calculator into a clean, modern web interface. 
 
 ## 🚀 Features
-* **Size Input:** Enter the number of elements(`n`) you want to count.
 * **Number Inputs:** Enter your integers just like the original `scanf` prompts.
 * **Terminal Operations:** Choose from Addition (`+`), Subtraction (`-`), Multiplication (`*`), and Division (`/`).
 * **Exit Simulation:** Includes an `!` button to simulate program exits.
@@ -13,6 +12,12 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 * HTML5
 * CSS3 (Terminal dark-theme styling)
 * C language (Form handling and math logic)
+
+## 🏃‍➡️ Code Updates
+* **Calculation:** You can now give & get both the `input` & `output` in `decimel` number.
+* **No-count:** You can now now `directly` enter the number to calculate.
+* **Count-increase:** Now you can count upto `100` numbers.
+* **Bug-fixed:** Division bug is now fixed.
 
 ## 💻 How to Run This Project Locally
 
