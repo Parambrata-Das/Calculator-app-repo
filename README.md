@@ -7,6 +7,7 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 * **Terminal Operations:** Choose from Addition (`+`), Subtraction (`-`), Multiplication (`*`), and Division (`/`).
 * **Exit Simulation:** Includes an `!` button to simulate program exits.
 * **Error Prevention:** Built-in safeguards against division-by-zero errors.
+* **Finish Entering NUmbers:** Enter `@` when you finished entering numbers.
 
 ## 🛠️ Built With
 * HTML5
@@ -18,6 +19,7 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 * **No-count:** You can now now `directly` enter the number to calculate.
 * **Count-increase:** Now you can count upto `100` numbers.
 * **Bug-fixed:** Division bug is now fixed.
+* **MORE UPDATE COMING SOON** 
 
 ## 💻 How to Run This Project Locally
 
