@@ -3,11 +3,13 @@
 A simple, lightweight web calculator that brings the logic of a classic C program terminal calculator into a clean, modern web interface. 
 
 ## 🚀 Features
-* **Number Inputs:** Enter your integers just like the original `scanf` prompts.
+* **Number Inputs:** Enter your integers & decimel numbers just like the original `scanf` prompts.
 * **Terminal Operations:** Choose from Addition (`+`), Subtraction (`-`), Multiplication (`*`), and Division (`/`).
-* **Exit Simulation:** Includes an `!` button to simulate program exits.
+* **Force stop:** Includes an `!` button to force stop the program & exits.
 * **Error Prevention:** Built-in safeguards against division-by-zero errors.
 * **Finish Entering NUmbers:** Enter `@` when you finished entering numbers.
+* **Short-cut buttons:** New short-cut buttons (`c`/`s`/`e`) are added for user.
+* **Multiple oparations:** You can now use multiple oparations(`+`/`-`/`*`/`/`/`!`) at a time.
 
 ## 🛠️ Built With
 * HTML5
@@ -16,9 +18,15 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 
 ## 🏃‍➡️ Code Updates
 * **Calculation:** You can now give & get both the `input` & `output` in `decimel` number.
-* **No-count:** You can now now `directly` enter the number to calculate.
+* **No-count:** You can now `directly` enter the number to calculate.
 * **Count-increase:** Now you can count upto `100` numbers.
 * **Bug-fixed:** Division bug is now fixed.
+* **User display:** More enhanced user display.
+* **Reset button:** New button `s` added for reset/start over.
+* **Countinue button:** New button `c` added for continue calculating with `prev` result.
+* **New exit button:** New exit button `e` added.
+* **Force-stop button:** New force stop button `!` added.
+* **Oparations:** You can now use multiple oparations at a time.
 * **MORE UPDATE COMING SOON** 
 
 ## 💻 How to Run This Project Locally
