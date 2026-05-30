@@ -1,18 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
+//RESET BUTTON
+//BACK SPACE
+//RESULT STORER
+//AGAIN CALCULATION WITH RESULT NUMBER
 int main ()
 {
  int i,n;
- char ch,junk;
+ char ch,junk,choice;
  float total;
- '(char +,-,*,/,!,@,.)';
- //("[NOTE 1: Enter the number one by one don't overpress!!!]\n")
- //("[NOTE 2: You can only calculate upto 100 numbers.]\n")
- //("[NOTE 3: Enter '@' when you finished typing all the numbers.]\n")
- //("[NOTE 4: Output only comes as rount-off (eg. X.XX)]")
- float num[100];
- 
- for(n=0;n<100;n++)
+    printf("=========================================\n");
+    printf("        C-STYLE WEB CALCULATOR         \n");
+    printf("  Supported keys: [ +  -  *  /  !  @  . ]\n");
+    printf("=========================================\n\n");
+    float num[100];
+ do{
+ 	    if(choice=='s'||choice=='S')
+ 	    {
+ 	    	n=0;
+		}
+		else if(choice=='c'||choice=='C')
+		{
+			num[0]=total;
+			n=1;
+			printf("Using the previous result as starter number: %.2f\n",total);
+		}
+		else if(choice=='e'||choice=='E')
+		{
+			printf("GOODBYE!!!THANK YOU FOR CHOOSING US.");
+			break;
+		}
+ for(;n<100;n++)
    {
        printf("Enter the numbers: "); 
        if( scanf("%f",&num[n])!=1.00)
@@ -26,49 +44,29 @@ int main ()
 	   	    return 1;
 	   }
        scanf(" %c",&junk);
-       //("\n[NOTE: YOU CAN PERFORM ONE OPERATION AT A TIME; UPDATE COMING SOON !!!]")
-       printf("\nEnter + for addition\nEnter - for subtraction\nEnter * for multiplication\nEnter / for Division\nEnter ! for exit\n");
- do{       
+       total=num[0];
+       printf("\nEnter + for addition\nEnter - for subtraction\nEnter * for multiplication\nEnter / for Division\nEnter ! for force stop\n");
+       printf("\nstarting the number with: %.2f\n",total);
+for(i=1;i<n;i++)
+{       
+       printf("\nThe next number is: %.2f",num[i]);
        printf("\nEnter the operation: ");
        scanf(" %c",&ch);     
-       if(ch=='+')
-       {
-       	total=0;
-	   }
-	   else if(ch=='*')
-	   {
-	   	total=1;
-	   }
-	   else
-	   {
-	   	total=num[0];
-	   }
        switch (ch)
     {
         case '+':
-       	for(i=0;i<n;i++)
-		{
            total+=num[i];
-		}
-        printf("\n%.2f\n",total);
+        printf("Running total: %.2f\n",total);
         break;
         case '-':
-        for(i=1;i<n;i++)
-		{
            total-=num[i];
-		}
-        printf("\n%.2f\n",total);
+        printf("Running total: %.2f\n",total);
         break;
         case '*':
-        for(i=0;i<n;i++)
-		{
            total*=num[i];
-		}
-        printf("\n%.2f\n",total);
+        printf("Running total: %.2f\n",total);
         break;
         case '/':
-        for(i=1;i<n;i++)
-		{
 			if(num[i]==0)
 			{
 				printf("!!INVALID DIVISION!!");
@@ -80,14 +78,26 @@ int main ()
 				break;	
 			}
             total/=num[i];
-		}
-        printf("\n%.2f\n",total);
+        printf("Running total: %.2f\n",total);
         break;
         case '!':
         exit (0);
         default:
-        printf("\nINVALID CHOICE!!!\n");
+        printf("\nINVALID CHOICE!!! NUMBER SKIPPED;\n");
     }
- }while (1); 
+ }
+ printf("\n==========================\n");
+ printf("  Final Result: %.2f\n",total);
+ printf("==========================\n");
+ 
+ printf("What do you want to do with result: ");
+ printf("\nEnter 'c' if you want to calculate with the result");
+ printf("\nEnter 's' if you want to start over");
+ printf("\nEnter 'e' if you want to exit\n");
+ printf("Enter your choice: ");
+ scanf(" %c",&choice);
+ 
+ printf("\n\n");
+}while(1);
  return 0; 
 }        
