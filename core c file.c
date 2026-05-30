@@ -1,9 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-//RESET BUTTON
-//BACK SPACE
-//RESULT STORER
-//AGAIN CALCULATION WITH RESULT NUMBER
 int main ()
 {
  int i,n;
@@ -71,11 +67,6 @@ for(i=1;i<n;i++)
 			{
 				printf("!!INVALID DIVISION!!");
 				break;
-			}
-			else if(num[i-1]==0)
-			{
-			    printf("!!INVALID DIVISION!!");
-				break;	
 			}
             total/=num[i];
         printf("Running total: %.2f\n",total);
