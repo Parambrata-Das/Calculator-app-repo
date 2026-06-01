@@ -22,7 +22,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 400px;
+    max-width: 450px; /* Slightly widened to fit structural buttons cleanly */
     border: 1px solid #444;
 }
 
@@ -33,19 +33,33 @@ h2 {
     font-size: 1.5rem;
 }
 
-/* Input Fields */
+/* Custom Rule: Added for your program notes introduction block */
+.terminal-header {
+    border-bottom: 1px dashed #555;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #aaa;
+}
+
+/* Input Fields & Section Wrappers */
 .input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
     margin-bottom: 15px;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
     font-size: 0.9rem;
     color: #ccc;
+    flex-shrink: 0;
 }
 
-input[type="number"] {
+/* Upgraded to text input type to handle '@', 'b', and floating points */
+input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #555;
@@ -53,21 +67,37 @@ input[type="number"] {
     color: #fff;
     border-radius: 4px;
     font-size: 1.1rem;
+    font-family: inherit;
 }
 
-input[type="number"]:focus {
+input[type="text"]:focus {
     outline: none;
     border-color: #4caf50;
 }
 
-/* Operator Layout */
-.operator-menu {
-    margin: 20px 0;
+/* Custom Rule: Live array queue element printout container */
+.number-list {
+    margin-top: 10px;
+    padding: 10px;
+    background: #151515;
+    border: 1px dashed #444;
+    font-size: 0.85rem;
+    color: #4caf50;
+    max-height: 100px;
+    overflow-y: auto;
+    word-break: break-all;
 }
 
-.operator-menu p {
+/* Operator and Operational State Menus Layout */
+.operator-menu, .post-menu-section {
+    margin: 20px 0;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+
+.operator-menu p, .post-menu-section p {
     font-size: 0.9rem;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: #aaa;
 }
 
@@ -76,6 +106,13 @@ input[type="number"]:focus {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-bottom: 10px;
+}
+
+/* Custom Rule: Split layout for continue/start-over utility block */
+.control-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 button {
@@ -87,17 +124,20 @@ button {
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s;
+    font-family: inherit;
+    transition: background 0.2s, color 0.2s;
 }
 
 button:hover {
     background-color: #4caf50;
+    color: #fff;
 }
 
 .exit-btn {
     width: 100%;
     background-color: #9e2a2b;
     font-size: 1rem;
+    margin-top: 5px;
 }
 
 .exit-btn:hover {
@@ -123,4 +163,10 @@ button:hover {
 #resultDisplay {
     font-size: 1.1rem;
     word-wrap: break-word;
+    color: #ffffff;
+}
+
+/* Custom Rule: Hidden state modifier used dynamically by JS */
+.hidden {
+    display: none !important;
 }
