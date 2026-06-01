@@ -10,84 +10,55 @@
     <div class="calculator-container">
         <h2>C-Style Calculator</h2>
         
-        <!-- Input Fields for Numbers -->
-        <div class="input-group">
-            <label for="num1">First Number (a):</label>
-            <input type="number" id="num1" placeholder="Enter first number">
-        </div>
-        
-        <div class="input-group">
-            <label for="num2">Second Number (b):</label>
-            <input type="number" id="num2" placeholder="Enter second number">
+        <div class="terminal-header">
+            [NOTE 1: Enter numbers one by one]<br>
+            [NOTE 2: Type 'b' to BACKSPACE / erase]<br>
+            [NOTE 3: Type '@' when finished typing numbers]
         </div>
 
-        <!-- Operator Buttons mimicking your switch case -->
-        <div class="operator-menu">
-            <p>Select the operation:</p>
-            <div class="button-grid">
-                <button onclick="calculate('+')">+</button>
-                <button onclick="calculate('-')">-</button>
-                <button onclick="calculate('*')">*</button>
-                <button onclick="calculate('/')">/</button>
+        <!-- PHASE 1: Number Entry Mode -->
+        <div id="entryPhase">
+            <div class="input-group">
+                <label id="inputLabel" for="counterInput">Enter number 1:</label>
+                <input type="text" id="counterInput" placeholder="Type number, 'b', or '@'" autocomplete="off">
             </div>
-            <button class="exit-btn" onclick="exitCalc()">! (Exit)</button>
+            <button style="width:100%; margin-bottom:15px;" onclick="processInput()">Submit Input</button>
+            
+            <div class="number-list" id="numberList">
+                Array Status: [ Empty ]
+            </div>
+        </div>
+
+        <!-- PHASE 2: Dynamic Sequence Operation Menu -->
+        <div id="operationPhase" class="operator-menu hidden">
+            <p id="opInstructions">Starting calculation with: 0.00</p>
+            <div class="button-grid">
+                <button onclick="applyOperation('+')">+</button>
+                <button onclick="applyOperation('-')">-</button>
+                <button onclick="applyOperation('*')">*</button>
+                <button onclick="applyOperation('/')">/</button>
+            </div>
+            <button class="exit-btn" onclick="applyOperation('!')">! (Force Stop)</button>
+        </div>
+
+        <!-- PHASE 3: Result Action Menu (c, s, e) -->
+        <div id="postMenuPhase" class="post-menu-section hidden">
+            <p>What do you want to do with the result?</p>
+            <div class="control-grid">
+                <button onclick="handlePostChoice('c')">'c' Continue</button>
+                <button onclick="handlePostChoice('s')">'s' Start Over</button>
+            </div>
+            <button class="exit-btn" onclick="handlePostChoice('e')">'e' Exit Calculator</button>
         </div>
 
         <!-- Display Output Box -->
         <div class="output-box">
-            <h3>Result:</h3>
-            <div id="resultDisplay">Enter numbers and select an operation</div>
+            <h3>Console Output:</h3>
+            <div id="resultDisplay">Enter numbers to get started...</div>
         </div>
     </div>
 
-    <!-- JavaScript logic to mimic your C program behavior -->
-    <script>
-        function calculate(operator) {
-            const a = parseFloat(document.getElementById('num1').value);
-            const b = parseFloat(document.getElementById('num2').value);
-            const display = document.getElementById('resultDisplay');
-
-            if (isNaN(a) || isNaN(b)) {
-                display.innerText = "Error: Please enter both numbers first.";
-                display.style.color = "#ff4d4d";
-                return;
-            }
-
-            let result;
-            display.style.color = "#fff";
-
-            switch(operator) {
-                case '+':
-                    result = a + b;
-                    break;
-                case '-':
-                    result = a - b;
-                    break;
-                case '*':
-                    result = a * b;
-                    break;
-                case '/':
-                    if (b === 0) {
-                        result = "Error: Division by zero!";
-                        display.style.color = "#ff4d4d";
-                    } else {
-                        result = a / b;
-                    }
-                    break;
-                default:
-                    result = "Enter the correct option";
-            }
-
-            display.innerText = result;
-        }
-
-        function exitCalc() {
-            const display = document.getElementById('resultDisplay');
-            display.innerText = "Program exited. Refresh to restart.";
-            display.style.color = "#aaa";
-            document.getElementById('num1').value = '';
-            document.getElementById('num2').value = '';
-        }
-    </script>
+    <!-- FIXED: This links your HTML directly to your separate JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
