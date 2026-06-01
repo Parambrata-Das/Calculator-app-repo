@@ -12,7 +12,8 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 ## 🛠️ Built With
 * HTML5
 * CSS3 (Terminal dark-theme styling)
-* C language (Form handling and math logic)
+* Javascript (Form handling and math logic)
+* C - language (The core)
 
 ## 🏃‍➡️ Code Updates & User manual
 * **Calculation:** You can now give & get both the `input` & `output` in `decimel` number.
