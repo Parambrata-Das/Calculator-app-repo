@@ -34,7 +34,7 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
    git clone https://github.com/Parambrata-Das/Calculator-app-repo.git
    ```
 2. Navigate into the project folder.
-3. Double-click the `index.html` file to open it instantly in any web browser.
+3. Double-click the `index.html`/`style.css`/`core C file.c` file to open it instantly in any web browser.
 
 ## 📜 Original C Code Logic
 This project is a web migration of a standard C `switch-case` calculator structure:
