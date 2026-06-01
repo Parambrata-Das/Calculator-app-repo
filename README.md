@@ -5,10 +5,8 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 ## 🚀 Features
 * **Number Inputs:** Enter your integers & decimel numbers just like the original `scanf` prompts.
 * **Terminal Operations:** Choose from Addition (`+`), Subtraction (`-`), Multiplication (`*`), and Division (`/`).
-* **Force stop:** Includes an `!` button to force stop the program & exits.
 * **Error Prevention:** Built-in safeguards against division-by-zero errors.
-* **Finish Entering NUmbers:** Enter `@` when you finished entering numbers.
-* **Short-cut buttons:** New short-cut buttons (`c`/`s`/`e`) are added for user.
+* **Short-cut buttons:** New short-cut buttons. (`c`/`s`/`e`)
 * **Multiple oparations:** You can now use multiple oparations(`+`/`-`/`*`/`/`/`!`) at a time.
 
 ## 🛠️ Built With
@@ -16,7 +14,7 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 * CSS3 (Terminal dark-theme styling)
 * C language (Form handling and math logic)
 
-## 🏃‍➡️ Code Updates
+## 🏃‍➡️ Code Updates & User manual
 * **Calculation:** You can now give & get both the `input` & `output` in `decimel` number.
 * **No-count:** You can now `directly` enter the number to calculate.
 * **Count-increase:** Now you can count upto `100` numbers.
