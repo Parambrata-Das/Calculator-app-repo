@@ -3,13 +3,15 @@
 int main ()
 {
  int i,n;
- char ch,junk,choice;
+ char ch,choice;
  float total;
+ float num[100];
+ char counter[100];
     printf("=========================================\n");
     printf("        C-STYLE WEB CALCULATOR         \n");
     printf("  Supported keys: [ +  -  *  /  !  @  . ]\n");
     printf("=========================================\n\n");
-    float num[100];
+    choice='s';
  do{
  	    if(choice=='s'||choice=='S')
  	    {
@@ -28,10 +30,31 @@ int main ()
 		}
  for(;n<100;n++)
    {
-       printf("Enter the numbers: "); 
-       if( scanf("%f",&num[n])!=1.00)
+       printf("Enter the number: "); 
+       scanf("%s",&counter);
+       if(counter[0]=='@')
        {
        	    break;
+	   }
+	   else if (counter[0]=='b'||counter[0]=='B')
+	   {
+	   	    int safe=(choice=='c'||choice=='C')?1:0;
+	   	    if(n>safe)
+	   	    {
+	   	    	n-=2;
+	   	    	printf("Last number erased!!! Re-enter the number;\n");
+			}
+			else
+			{
+				n=safe-1;
+				printf("Nothing left to erase.\n");
+			}
+			continue;
+	   }
+	   if(sscanf(counter,"%f",&num[n])!=1)
+	   {
+	   	    printf("Invalid input!!!input any number,b or @");
+	   	    n--;
 	   }
     }
 	   if(n==0)
@@ -39,7 +62,6 @@ int main ()
 	   	    printf("No number entered!!!\n");
 	   	    return 1;
 	   }
-       scanf(" %c",&junk);
        total=num[0];
        printf("\nEnter + for addition\nEnter - for subtraction\nEnter * for multiplication\nEnter / for Division\nEnter ! for force stop\n");
        printf("\nstarting the number with: %.2f\n",total);
