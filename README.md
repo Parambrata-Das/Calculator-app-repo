@@ -25,6 +25,7 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 * **New exit button:** New exit button `e` added.
 * **Force-stop button:** New force stop button `!` added.
 * **Oparations:** You can now use multiple oparations at a time.
+* **Backspace:** New button `b` was added for backspace.
 * **MORE UPDATE COMING SOON** 
 
 ## 💻 How to Run This Project Locally
