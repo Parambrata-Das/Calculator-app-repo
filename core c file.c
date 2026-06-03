@@ -2,11 +2,12 @@
 #include <stdlib.h>
 int main ()
 {
- int i,n;
+ int i,n,h,hc;
  char ch,choice;
  float total;
  float num[100];
  char counter[100];
+ float history[100];
     printf("=========================================\n");
     printf("        C-STYLE WEB CALCULATOR         \n");
     printf("  Supported keys: [ +  -  *  /  !  @  . ]\n");
@@ -22,6 +23,23 @@ int main ()
 			num[0]=total;
 			n=1;
 			printf("Using the previous result as starter number: %.2f\n",total);
+		}
+		else if(choice=='h'||choice=='H')
+		{
+			printf("\n------CALCULATION HISTORY------\n");
+			if(hc==0)
+			{
+				printf("No history found");
+				return 1;
+			}
+			else
+			{
+				for(h=0;h<hc;h++)
+				{
+					printf("calculation [%d]= %.2f",h+1,history[h]);
+					return 1;
+				}
+			}
 		}
 		else if(choice=='e'||choice=='E')
 		{
@@ -103,10 +121,17 @@ for(i=1;i<n;i++)
  printf("  Final Result: %.2f\n",total);
  printf("==========================\n");
  
+ if(hc<100)
+ {
+ 	history[hc]=total;
+ 	hc++;
+ }
+ 
  printf("What do you want to do with result: ");
- printf("\nEnter 'c' if you want to calculate with the result");
- printf("\nEnter 's' if you want to start over");
- printf("\nEnter 'e' if you want to exit\n");
+ printf("\nEnter 'c' to use your previous calculation result");
+ printf("\nEnter 's' to start over");
+ printf("\nEnter 'e' to exit");
+ printf("\nEnter 'h' to show calculation history\n");
  printf("Enter your choice: ");
  scanf(" %c",&choice);
  
