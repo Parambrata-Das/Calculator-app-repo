@@ -1,4 +1,4 @@
-# C-Style Web Calculator
+# C-Style Web Calculator - v.0.1.2
 
 A simple, lightweight web calculator that brings the logic of a classic C program terminal calculator into a clean, modern web interface. 
 
@@ -13,7 +13,7 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 * HTML5
 * CSS3 (Terminal dark-theme styling)
 * Javascript (Form handling and math logic)
-* C - language (The core)
+* C - language (Terminal version)
 
 ## 🏃‍➡️ Code Updates & User manual
 * **Calculation:** You can now give & get both the `input` & `output` in `decimel` number.
@@ -27,6 +27,7 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 * **Force-stop button:** New force stop button `!` added.
 * **Oparations:** You can now use multiple oparations at a time.
 * **Backspace:** New button `b` was added for backspace.
+* **History button:** New history button `h` added to show calculation history. (Terminal only)
 * **MORE UPDATE COMING SOON** 
 
 ## 💻 How to Run This Project Locally
