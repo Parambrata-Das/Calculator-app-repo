@@ -15,7 +15,49 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 * Javascript (Form handling and math logic)
 * C - language (Terminal version)
 
-## 🏃‍➡️ Code Updates & User manual
+## 🎮 Usage Guide
+
+### Data Entry Phase
+When the program asks you to `Enter the number:`, use these control characters:
+* `@` : **Stop Entry**. Concludes the data entry phase and moves to operations.
+* `B` / `b` : **Undo Input**. Erases the last recorded number so you can overwrite it.
+
+### Operation Phase
+Apply these operators step-by-step to the remaining queue of numbers:
+* `+` : **Addition**
+* `-` : **Subtraction**
+* `*` : **Multiplication**
+* `/` : **Division** (Features an internal protection block against dividing by zero)
+* `!` : **Emergency Stop**. Kills the program execution state instantly.
+
+### Session Menu Phase
+At the end of a calculation, navigate the execution loop with these single characters:
+* `c` : **Continue**. Begins a new session using your last result as the starting number.
+* `s` : **Start Over**. Wipes the current numbers and starts a fresh calculation.
+* `h` : **History**. Displays all final answers computed in the active session.
+* `e` : **Exit**. Closes the program gracefully.
+
+## 💻 How to Run This Project Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Parambrata-Das/Calculator-app-repo.git
+   ```
+2. Navigate into the project folder.
+3. Put the `index.html`,`style.css`,`script.js` files to a single folder.
+4. Then run the folder in `VS code` or any other compailars.
+
+## 📜 Original C Code Logic
+This project is a web migration of a standard C `switch-case` calculator structure:
+```c
+switch (ch) {
+    case '+': ch = a + b; break;
+    case '-': ch = a - b; break;
+    case '*': ch = a * b; break;
+    case '/': ch = a / b; break;
+}
+```
+## 🏃‍➡️ Updates 
 * **Calculation:** You can now give & get both the `input` & `output` in `decimel` number.
 * **No-count:** You can now `directly` enter the number to calculate.
 * **Count-increase:** Now you can count upto `100` numbers.
@@ -30,23 +72,7 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 * **History button:** New history button `h` added to show calculation history. (Terminal only)
 * **MORE UPDATE COMING SOON** 
 
-## 💻 How to Run This Project Locally
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Parambrata-Das/Calculator-app-repo.git
-   ```
-2. Navigate into the project folder.
-3. Put the `index.html`,`style.css`,`script.js` files to a single folder.
-4. Then run the folder in `VS code` or other compailars.
+## 🤝 Contributing
 
-## 📜 Original C Code Logic
-This project is a web migration of a standard C `switch-case` calculator structure:
-```c
-switch (ch) {
-    case '+': ch = a + b; break;
-    case '-': ch = a - b; break;
-    case '*': ch = a * b; break;
-    case '/': ch = a / b; break;
-}
-```
+Contributions, issues, and feature requests are welcome! Feel free to fork this project to expand features like file management persistence, data searching, or ascending roll sorting mechanisms.
