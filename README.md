@@ -1,4 +1,4 @@
-# C-Style Web Calculator - v.0.1.2
+# C-Style Terminal Calculator - v.0.1.2
 
 A simple, lightweight web calculator that brings the logic of a classic C program terminal calculator into a clean, modern web interface. 
 
@@ -10,10 +10,8 @@ A simple, lightweight web calculator that brings the logic of a classic C progra
 * **Multiple oparations:** You can now use multiple oparations(`+`/`-`/`*`/`/`/`!`) at a time.
 
 ## 🛠️ Built With
-* HTML5
-* CSS3 (Terminal dark-theme styling)
-* Javascript (Form handling and math logic)
-* C - language (Terminal version)
+*   **Language:** C (C99 standard or higher)
+*   **Libraries used:** `<stdio.h>`, `<stdlib.h>`
 
 ## 🎮 Usage Guide
 
@@ -44,7 +42,7 @@ At the end of a calculation, navigate the execution loop with these single chara
    git clone https://github.com/Parambrata-Das/Calculator-app-repo.git
    ```
 2. Navigate into the project folder.
-3. Put the `index.html`,`style.css`,`script.js` files to a single folder.
+3. Put the `Terminal C file` to a single folder.
 4. Then run the folder in `VS code` or any other compailars.
 
 ## 📜 Original C Code Logic
@@ -69,7 +67,7 @@ switch (ch) {
 * **Force-stop button:** New force stop button `!` added.
 * **Oparations:** You can now use multiple oparations at a time.
 * **Backspace:** New button `b` was added for backspace.
-* **History button:** New history button `h` added to show calculation history. (Terminal only)
+* **History button:** New history button `h` added to show calculation history.
 * **MORE UPDATE COMING SOON** 
 
 
