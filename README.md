@@ -73,4 +73,6 @@ switch (ch) {
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to fork this project to expand features like file management persistence, data searching, or ascending roll sorting mechanisms.
+Contributions, issues, and feature requests are welcome! Feel free to fork this project to expand features like calculation with multiple oparation at
+a time, history feature to store calculation history.
+
