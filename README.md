@@ -1,6 +1,6 @@
 # C-Style Terminal Calculator - v.0.1.2
 
-A simple, lightweight web calculator that brings the logic of a classic C program terminal calculator into a clean, modern web interface. 
+A simple, lightweight Terminal calculator which is made by the classic C programs.
 
 ## 🚀 Features
 * **Number Inputs:** Enter your integers & decimel numbers just like the original `scanf` prompts.
