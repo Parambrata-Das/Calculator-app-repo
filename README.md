@@ -55,21 +55,6 @@ switch (ch) {
     case '/': ch = a / b; break;
 }
 ```
-## 🏃‍➡️ Updates 
-* **Calculation:** You can now give & get both the `input` & `output` in `decimel` number.
-* **No-count:** You can now `directly` enter the number to calculate.
-* **Count-increase:** Now you can count upto `100` numbers.
-* **Bug-fixed:** Division bug is now fixed.
-* **User display:** More enhanced user display.
-* **Reset button:** New button `s` added for reset/start over.
-* **Countinue button:** New button `c` added for continue calculating with `prev` result.
-* **New exit button:** New exit button `e` added.
-* **Force-stop button:** New force stop button `!` added.
-* **Oparations:** You can now use multiple oparations at a time.
-* **Backspace:** New button `b` was added for backspace.
-* **History button:** New history button `h` added to show calculation history.
-* **MORE UPDATE COMING SOON** 
-
 
 ## 🤝 Contributing
 
