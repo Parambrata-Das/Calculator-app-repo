@@ -1,4 +1,4 @@
-# C-Style Terminal Calculator - v.0.1.2
+# C-Style Terminal Calculator - v.0.1.3
 
 A simple, lightweight Terminal calculator which is made by the classic C programs.
 
